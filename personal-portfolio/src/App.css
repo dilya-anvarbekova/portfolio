@@ -537,3 +537,180 @@ nav.navbar.scrolled .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   margin: 0 auto 15px auto;
 }
+
+/* Experience Section */
+.section__title {
+  font-size: 45px;
+	font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.resume__container {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.875rem;
+}
+
+.timeline {
+  background-color: var(--light-shade);
+  padding: 1.875rem;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline .icon-briefcase,
+.timeline .icon-graduation,
+.timeline .icon-layers {
+  position: absolute;
+  left: -0.4375rem;
+  top: 0;
+  font-size: 30px;
+  color: var(--main-color);
+  background-color: var(--light-shade);
+  padding: 0.4375rem 0;
+}
+
+.timeline__date {
+  color: var(--main-color);
+  font-size: 15px;
+}
+
+.timeline__title {
+  font-size: 20px;
+  margin: 0.5rem 0;
+  color: var(--main-color)
+}
+
+.timeline__role {
+  font-size: 17px;
+  margin: 0.5rem 0;
+  color: var(--main-color);
+  font-style: italic; 
+}
+
+.timeline__location {
+  font-size: 15px;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .resume__container {
+      grid-template-columns: 450px;
+      justify-content: center;
+      row-gap: 1.875rem;
+  }
+
+  .timeline__item::before {
+      left: 2px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .resume__container {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .timeline__item {
+      padding-left: 1.875rem;
+      padding-bottom: 1.875rem;
+  }
+
+  .timeline__item::before {
+      left: 0;
+  }
+
+  .timeline .icon-briefcase,
+  .timeline .icon-graduation {
+      left: -9px;
+  }
+
+  .timeline__text {
+      text-align: justify;
+      color: var(--dark-shade) !important;
+  }
+}
+
+/*=============== Base ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=============== Resuable CSS Classes ===============*/
+.container {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  margin-left: 0.875rem;
+  font-weight: var(--font-bold);
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+
+.section__title::before {
+  content: "";
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  left: -0.875rem;
+  top: -0.875rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-block;
+  background-color: var(--first-color);
+  font-weight: var(--font-bold);
+}
+
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:hover {
+  animation: button-push 0.3s linear 1;
+}
