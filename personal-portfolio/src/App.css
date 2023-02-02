@@ -796,3 +796,42 @@ html {
   left: -9px;
   top: 20px;
 }
+
+/* Footer */
+/************ Footer Css ************/
+.footer {
+  padding: 0 0 5px 0;
+  background-color: var(--main-color);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--light-shade);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--light-shade);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--light-accent);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  text-decoration: none;
+}
